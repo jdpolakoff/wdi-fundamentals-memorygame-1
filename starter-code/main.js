@@ -42,10 +42,7 @@ var cards = [
   if (cardsInPlay.length === 2) {
       checkForMatch();
     }   
- 
- var flipCard = function (cardId) {
   
-
 var createBoard = function () {
   for (var i = 0; i < cards.length; i++) {
   var cardElement = document.createElement('img');
