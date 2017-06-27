@@ -28,26 +28,24 @@ var cards = [
       console.log("You found a match!");
     } else {
       console.log("Sorry, try again.");
- 
     }
   };
   
   var flipCard = function () {
-   var card Id = this.getAttribute('data id');
-    console.log("User flipped " + cards[cardId].rank);
-    cardsInPlay.push(cards[cardId].rank);
+   var cardId = this.getAttribute('dataId');
    console.log("User flipped " + cards[cardId].rank);
-  cardsInPlay.push(cards[cardId].rank);
-  this.setAttribute('src', cards[cardId].cardimage);
-  if (cardsInPlay.length === 2) {
+   cardsInPlay.push(cards[cardId].rank);
+   this.setAttribute('src', cards[cardId].cardImage)};
+   if (cardsInPlay.length === 2) {
       checkForMatch();
-    }   
+    }
+  
   
 var createBoard = function () {
   for (var i = 0; i < cards.length; i++) {
   var cardElement = document.createElement('img');
   cardElement.setAttribute('src', 'images/back.png');
-  cardElement.setAttribute('data id', i);
+  cardElement.setAttribute('dataId', i);
   cardElement.addEventListener('click', flipCard);
   document.getElementById('game-board').appendChild(cardElement);
   }
