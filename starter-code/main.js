@@ -35,10 +35,13 @@ var cards = [
    var cardId = this.getAttribute('dataId');
    console.log("User flipped " + cards[cardId].rank);
    cardsInPlay.push(cards[cardId].rank);
-   this.setAttribute('src', cards[cardId].cardImage)};
+   this.setAttribute('src', cards[cardId].cardImage)
+   console.log(this);
    if (cardsInPlay.length === 2) {
       checkForMatch();
     }
+  };
+
   
   
 var createBoard = function () {
